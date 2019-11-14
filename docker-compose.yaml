@@ -1,0 +1,14 @@
+version: "3.6"
+
+services:
+
+  kafka-mirror:
+    build:
+      context: ./
+      args:
+        PYTHON_VER: ${PYTHON_VER}
+        LIBCITISIM_VER: ${LIBCITISIM_VER}
+    image: citisim-kafka-adapter:${DOCKER_IMAGE_TAG}
+    container_name: citisim-kafka-adapter
+    environment:
+      KAFKA_BROKER: ${KAFKA_BROKER:-127.0.0.1:9092}

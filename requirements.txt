@@ -1,0 +1,2 @@
+libcitisim-${LIBCITISIM_VER}.tar.gz
+pykafka
